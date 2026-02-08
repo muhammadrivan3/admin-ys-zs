@@ -1,8 +1,9 @@
 import React from "react";
 import { AdminSection } from "../../../controllers/admin/sections";
+import { AdminContentMap } from "../../../controllers/admin/sections";
 import { headingFont } from "./adminFonts";
 
-export default function AdminSectionHeader<T extends string>({
+export default function AdminSectionHeader<T extends keyof AdminContentMap>({
   section,
   stats,
   rightActions,

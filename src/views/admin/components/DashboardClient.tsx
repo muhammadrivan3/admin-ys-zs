@@ -60,8 +60,8 @@ export default function AdminDashboardClient() {
       {sectionList.map((section) => (
         <section key={section.key} id={`section-${section.key}`} className="admin-section">
           <AdminSectionHeader
-            section={section}
-            stats={section.stats(content[section.key])}
+            section={section as any}
+            stats={section.stats(content[section.key] as any)}
             rightActions={
               <button
                 className="admin-button admin-button--ghost"
