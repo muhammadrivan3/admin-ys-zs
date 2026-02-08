@@ -71,6 +71,27 @@
   gap: 10px;
 }
 
+.admin-nav__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-nav__label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--admin-muted);
+  font-weight: 700;
+  padding: 6px 10px 0;
+}
+
+.admin-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .admin-nav a {
   display: flex;
   align-items: center;
@@ -756,4 +777,3 @@
     justify-content: space-between;
   }
 }
-
