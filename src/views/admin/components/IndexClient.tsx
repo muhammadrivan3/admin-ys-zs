@@ -1,7 +1,5 @@
 "use client";
 import React, { useMemo, useState } from "react";
-import AdminPageShell from "./AdminPageShell";
-import AdminSidebar from "./AdminSidebar";
 import { sections } from "../../../controllers/admin/sections";
 import { useAdminContent } from "../../../controllers/admin/useAdminContent";
 import { headingFont } from "./adminFonts";
@@ -24,7 +22,7 @@ export default function AdminIndexClient() {
   }, [query, sectionList]);
 
   return (
-    <AdminPageShell sidebar={<AdminSidebar content={content} />}>
+    <>
       <section className="admin-hero">
         <h1 className={headingFont.className}>Admin Center</h1>
         <p>Pilih halaman yang ingin Anda kelola.</p>
@@ -57,6 +55,6 @@ export default function AdminIndexClient() {
           </div>
         ) : null}
       </section>
-    </AdminPageShell>
+    </>
   );
 }

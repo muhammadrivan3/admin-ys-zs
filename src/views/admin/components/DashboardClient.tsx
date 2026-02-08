@@ -2,9 +2,7 @@
 import React, { useMemo, useState } from "react";
 import schemas from "../../../models/admin/schemas/typeSchemas";
 import { headingFont } from "./adminFonts";
-import AdminPageShell from "./AdminPageShell";
 import AdminSectionHeader from "./AdminSectionHeader";
-import AdminSidebar from "./AdminSidebar";
 import EditorPanel from "./EditorPanel";
 import { sections, AdminTypeName } from "../../../controllers/admin/sections";
 import { useAdminContent } from "../../../controllers/admin/useAdminContent";
@@ -18,7 +16,7 @@ export default function AdminDashboardClient() {
   const totalTypes = sectionList.length;
 
   return (
-    <AdminPageShell sidebar={<AdminSidebar content={content} />}>
+    <>
       <section className="admin-hero">
         <h1 className={headingFont.className}>Pusat Konten Administrator</h1>
         <p>
@@ -86,6 +84,6 @@ export default function AdminDashboardClient() {
           </div>
         </section>
       ))}
-    </AdminPageShell>
+    </>
   );
 }
